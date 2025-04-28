@@ -16,7 +16,7 @@
 h1 {
   display:flex;
   flex-direction:column;
-  flex: 0 0 4 auto;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   font-family: var(--font-family-2), sans-serif; /* Use the alternative font */
   font-size: 300%;
@@ -39,6 +39,11 @@ h2 {
   
   color: var(--text-color);
   margin-bottom: 2rem;
+}
+h3 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 /*nav bar Styles*/
 nav {
@@ -124,12 +129,17 @@ nav {
   font-size: 120%;
   box-shadow: 0 10px 10px var(--primary-color);
   z-index: 99;
+  margin-bottom: 2px;
 }
-#services .card-body * {
+#services .card-body {
   margin-bottom: auto;
   padding: 20px;
   line-height: auto;
-  background-color: rgb(87, 27, 183);
+  background-color: rgb(85, 18, 200);
+}
+#services .card-body:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
 }
 /*Body styles*/
 body {
@@ -177,7 +187,7 @@ footer .social-links {
   font-size: 150%;
 }
 .contact {
-  display: flex;
+  display: flex; /* Ensures flex container behavior */
   flex-direction: row;
   margin-top: 10px;
   padding: 0 100px;
@@ -188,13 +198,10 @@ footer .social-links {
   /* Add your responsive styles here */
 /* Removed empty ruleset for #services .card-body */
 
-#services .card-body * {
-  background-color: rgb(87, 27, 183);
-  line-height: auto;
-  display:flex;
-  flex-direction:column;
-  align-items: baseline;
-  max-height: none; /* Adjusted to allow flexible height */
+#services .card-body {
+  max-height: 10px; /* Adjusted to allow flexible height */
+  padding: 20px;
+  margin-bottom: auto;
 }
 
 main {
