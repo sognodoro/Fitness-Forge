@@ -6,21 +6,19 @@
 :root {
   --primary-color: #0303fc; /* royal blue */
   --secondary-color: #4103fc; /* navy blue */
+  --secondary-color-fallback: #000080; /* fallback navy blue */
   --tertiary-color: #03f4fc; /* aquamarine */
-  --text-color: rgb(246, 235, 235); /* light gray */
+  --text-color: rgb(18, 17, 17); /* light gray */
   --font-family: "Montserrat", sans-serif; /* default font */
   --font-family-2: "Alfa Slab One", sans-serif; /* alternative font */
   --border-color: black; /* default border color */
 }
 /*Heading styles*/
 h1 {
-  display:flex;
-  flex-direction:column;
-  flex: 0 0 auto;
-  flex-wrap: wrap;
   font-family: var(--font-family-2), sans-serif; /* Use the alternative font */
   font-size: 300%;
-  text-align: center;
+  text-align: center; /* Align text to the center */
+  text-align: -webkit-center; /* Fallback for older WebKit browsers */
   box-shadow: 0 10px 10px #0f0f10;
   z-index: 120;
   letter-spacing: 4px;
@@ -33,17 +31,26 @@ h1 {
 }
 h1:hover {
   color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+  text-shadow: 0 0 10px var(--tertiary-color, #03f4fc), 0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
 }
 h2 {
-  
+  font-size:small;
+  color:white;
+  letter-spacing: 4px;
+  font-size: 1.5rem; /* Adjusted to a more readable size */
+}
+#text-center {
+  justify-content: center; /* Center the content */
+  text-align: center; /* Center the text */
+  font-family: var(--font-family), Arial, sans-serif; /* Use the default font */
+  font-size: 150%;
   color: var(--text-color);
   margin-bottom: 2rem;
 }
 h3 {
   color: var(--text-color);
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 2rem; /* Ensure this is applied to an element with proper context */
 }
 /*nav bar Styles*/
 nav {
@@ -64,7 +71,6 @@ nav {
   padding: 10px 20px;
 }
 #navbar .nav-item {
-  color: black;
   font-family: var(--font-family), Arial, sans-serif;
   font-size: 150%;
   text-decoration: none;
@@ -72,12 +78,8 @@ nav {
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
   color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+  text-shadow: 0 0 10px var(--tertiary-color, #03f4fc), 0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
 }
-#navbar a:hover {
-  color: var(--secondary-color, #4103fc); /* Fallback to navy blue */
-}
-
 #navbar a {
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
@@ -119,28 +121,7 @@ nav {
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
 /*Card styles*/
-#services .card-footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: var(--font-family);
-  font-size: 120%;
-  box-shadow: 0 10px 10px var(--primary-color);
-  z-index: 99;
-  margin-bottom: 2px;
-}
-#services .card-body {
-  margin-bottom: auto;
-  padding: 20px;
-  line-height: auto;
-  background-color: rgb(85, 18, 200);
-}
-#services .card-body:hover {
-  color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
-}
+
 /*Body styles*/
 body {
   background-color: rgb(46, 48, 43);
@@ -151,7 +132,8 @@ main {
 }
 /*footer styles*/
 footer {
-  background-color: var(--secondary-color);
+ 
+  background-color: rgb(87, 27, 183);
   color: var(--text-color);
   padding: 20px;
   text-align: center;
@@ -161,7 +143,7 @@ footer {
   z-index: 99;
 }
 footer a {
-  color: var(--text-color);
+  color: rgb(48, 33, 72);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -195,12 +177,10 @@ footer .social-links {
 }
 /*media queries for screens 768px and wider*/
 @media screen and (min-width: 768px) {
-  /* Add your responsive styles here */
-/* Removed empty ruleset for #services .card-body */
+/* Add your responsive styles here */
 
 #services .card-body {
-  max-height: 10px; /* Adjusted to allow flexible height */
-  padding: 20px;
+ 
   margin-bottom: auto;
 }
 
