@@ -1,26 +1,30 @@
 /*google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+/*Color & font variables*/
 :root {
   --primary-color: #0303fc; /* royal blue */
   --secondary-color: #4103fc; /* navy blue */
   --tertiary-color: #03f4fc; /* aquamarine */
   --text-color: rgb(246, 235, 235); /* light gray */
-  --font-family: "Montserrat", sans-serif;
-  --font-family-2: "Alfa Slab One", sans-serif;
+  --font-family: "Montserrat", sans-serif; /* default font */
+  --font-family-2: "Alfa Slab One", sans-serif; /* alternative font */
+  --border-color: black; /* default border color */
 }
 /*Heading styles*/
 h1 {
-  font-size: 200%;
-  font-family: var(--font-family-2), var(--font-family), Arial, sans-serif;
+  font-family: var(--font-family-2), sans-serif; /* Use the alternative font */
+  font-size: 300%;
   text-align: center;
   box-shadow: 0 10px 10px #0f0f10;
   z-index: 120;
   letter-spacing: 4px;
   color: #0b0505;
-  max-width: 120%;
+  max-width: 100%;
   background-color: rgb(87, 27, 183);
-  border-radius: 4px solid black;
+  border-radius: 8px;
+  border: 4px solid var(--primary-color, #000); /* Fallback to black */
 }
 h1:hover {
   color: var(--secondary-color);
@@ -28,6 +32,7 @@ h1:hover {
 }
 h2 {
   color: var(--text-color);
+  margin-bottom: 2rem;
 }
 /*nav bar Styles*/
 nav {
@@ -66,6 +71,59 @@ nav {
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
 /*button styles*/
+#book-now-button {
+  font-size: 100%;
+  font-family: var(--font-family), Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 10px 10px #0f0f10;
+  z-index: 120;
+  color: #f9f2f2;
+  max-width: 100%;
+  background-color: rgb(87, 27, 183);
+  border-radius: 8px;
+  border: 4px solid var(--primary-color, black); /* Fallback to black */
+}
+#book-now-button:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+}
+#submit-now-button {
+  font-size: 100%;
+  font-family: var(--font-family), Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 120;
+  color: #f8f1f1;
+  max-width: 100%;
+  background-color: rgb(87, 27, 183);
+  border-radius: 8px;
+  border: 4px solid var(--primary-color, black); /* Fallback to black */
+}
+#submit-now-button:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+}
+/*Card styles*/
+#services .card-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 120%;
+  box-shadow: 0 10px 10px var(--primary-color);
+  z-index: 99;
+}
+#services .card-body {
+  margin-bottom: 1.5rem;
+  line-height: auto;
+}
+/*Body styles*/
 body {
   background-color: rgb(46, 48, 43);
 }
@@ -116,4 +174,22 @@ footer .social-links {
   margin-top: 10px;
   padding: 0 100px;
   font-size: 150%;
+}
+/*media queries for screens 768px and wider*/
+@media screen and (min-width: 768px) {
+  /* Add your responsive styles here */
+/* Removed empty ruleset for #services .card-body */
+
+#services .card-body {
+  background-color: rgb(46, 48, 43);
+  line-height: auto;
+  display:flex;
+  flex-direction:column;
+  align-items: baseline;
+  max-height: none; /* Adjusted to allow flexible height */
+}
+
+main {
+  /* Add styles for main if needed */
+}
 }
