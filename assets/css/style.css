@@ -31,7 +31,7 @@ h1 {
 }
 h1:hover {
   color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color, #03f4fc), 0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
+  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color); /* Ensure variables are defined in :root */
 }
 h2 {
   font-size:small;
@@ -70,7 +70,7 @@ nav {
   border-radius: 10px;
   padding: 10px 20px;
 }
-#navbar .nav-item {
+#navbar .nav-link {
   font-family: var(--font-family), Arial, sans-serif;
   font-size: 150%;
   text-decoration: none;
@@ -80,8 +80,8 @@ nav {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color, #03f4fc), 0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
 }
-#navbar a {
-  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+#navbar .nav-link a:hover {
+  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--tertiary-color, #0303fc); /* Added fallback colors */
 }
 /*button styles*/
 #book-now-button {
@@ -121,6 +121,10 @@ nav {
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
 /*Card styles*/
+#services .card-body ul {
+  list-style-type: none;
+  padding: 0 0;
+}
 
 /*Body styles*/
 body {
@@ -179,9 +183,11 @@ footer .social-links {
 @media screen and (min-width: 768px) {
 /* Add your responsive styles here */
 
-#services .card-body {
- 
-  margin-bottom: auto;
+#services .card {
+  flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space between */
+  margin: 10px; /* Space between cards */
+  box-shadow: 0 10px 10px var(--primary-color);
+  z-index: 99;
 }
 
 main {
