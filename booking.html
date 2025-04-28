@@ -85,18 +85,30 @@
                     <label for="time" class="form-label">Time</label>
                     <input type="time" class="form-control" id="time" name="time" required />
                 </div>
+                <div class="col-md-6">
+                    <label for="duration" class="form-label">fitness 1</label>
+                    <select class="form-select" id="duration" name="duration" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="30-minutes">30 minutes</option>
+                        <option value="1-hour">1 hour</option>
+                        <option value="1.5-hours">1.5 hours</option>
+                </select>
+            </div>
             <div class="col-md-6">
-            <label for="session-type" class="form-label">Session Type</label>
+                <label for="session-type" class="form-label">fitness 2</label>
                 <select class="form-select" id="session-type" name="session-type" required>
                     <option selected disabled value="">Choose...</option>
                     <option value="personal-training">Personal Training</option>
                     <option value="group-class">Group Class</option>
-                    <option value="nutrition-consultation">Nutrition Consultation</option>
+                    <option value="yoga-session">fitness 1</option>
+                    <option value="pilates-session">fitness 2</option>
+                    <option value="strength-training">Nutition 1</option>
+                    <option value="cardio-session">Nutrition 2</option>
                 </select>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="mb-4" id="submit-now-button"><strong>Submit now</strong></button>
-                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="mb-4" id="submit-now-button"><strong>Submit now</strong></button>
+            </div>
         </form>
     </section>
 </main>
