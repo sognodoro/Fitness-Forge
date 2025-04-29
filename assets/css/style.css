@@ -25,17 +25,16 @@ h1 {
   color: #0b0505;
   background-color: rgb(87, 27, 183);
   border-radius: 8px;
-  border: 4px solid var(--primary-color, #000); /* Fallback to black */}
-
- 
+  border: 4px solid var(--primary-color, #000); /* Fallback to black */
+}
 
 h1:hover {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color); /* Ensure variables are defined in :root */
 }
 h2 {
-  font-size:small;
-  color:silver;
+  font-size: small;
+  color: silver;
   letter-spacing: 4px;
   font-size: 1.5rem; /* Adjusted to a more readable size */
 }
@@ -82,10 +81,12 @@ nav {
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
   color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color, #03f4fc), 0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
+  text-shadow: 0 0 10px var(--tertiary-color, #03f4fc),
+    0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
 }
 #navbar .nav-item a:hover {
-  text-shadow: 0 0 10px var(--primary-color, #0303fc), 0 0 20px var(--tertiary-color, #03f4fc); /* Corrected fallback colors */
+  text-shadow: 0 0 10px var(--primary-color, #0303fc),
+    0 0 20px var(--tertiary-color, #03f4fc); /* Corrected fallback colors */
 }
 /*button styles*/
 #book-now-button {
@@ -129,6 +130,14 @@ nav {
   list-style-type: none;
   padding: 0 0;
 }
+#services .card-body {
+  padding: 20px;
+  background-color: whitesmoke;/* Fallback to navy blue */
+  box-shadow: 0 10px 10px #571bb7;
+  z-index: 99;
+  border-radius: 8px;
+}
+
 
 /*Body styles*/
 body {
@@ -140,7 +149,6 @@ main {
 }
 /*footer styles*/
 footer {
- 
   background-color: rgb(87, 27, 183);
   color: var(--text-color);
   padding: 20px;
@@ -192,8 +200,24 @@ footer .social-links {
   z-index: 99;
   transition: all 0.3s ease-in-out;
   border: 4px solid var(--primary-color, black); /* Fallback to black */
+}
 
- 
+/*Booking form styles*/
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(
+    --secondary-color-fallback,
+    var(--secondary-color)
+  ); /* Fallback to navy blue */
+  background: url("images/pexels-anush-1431282.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  box-shadow: 0 10px 10px var(--primary-color);
+  z-index: 99;
 }
 .contact :hover h3 {
   color: var(--secondary-color);
@@ -201,19 +225,20 @@ footer .social-links {
 }
 /*media queries for screens 768px and wider*/
 @media screen and (min-width: 768px) {
-/* Add your responsive styles here */
+  /* Add your responsive styles here */
 
-#services .card {
-  flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space between */
-  margin: 10px; /* Space between cards */
-  box-shadow: 0 10px 10px var(--primary-color);
-  z-index: 99;
-}
-#photos {
-  column-count: 2;
-}
+  #services .card {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space between */
+    margin: 10px; /* Space between cards */
+    box-shadow: 0 10px 10px var(--primary-color);
+    z-index: 99;
+  }
+  #photos {
+    column-count: 2;
+  }
+  #nutrition {
+    column-count: 2;
+  }
 
-main {
-  /* Add styles for main if needed */
-}
+
 }
