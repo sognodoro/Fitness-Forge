@@ -137,6 +137,25 @@ nav {
   z-index: 99;
   border-radius: 8px;
 }
+#events .card-body {
+  padding: 20px;
+  background-color: whitesmoke; /* Fallback to navy blue */
+  box-shadow: 0 10px 10px #571bb7;
+  z-index: 99;
+  border-radius: 8px;
+}
+#events .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: url("./images/pexels-pavel-danilyuk-6339326.webp") no-repeat center center
+    fixed; /* Adjusted path assuming the image folder is one level up from the CSS folder */
+    background-size: cover;
+    z-index: 99;
+}
+
 
 
 /*Body styles*/
@@ -184,6 +203,16 @@ footer .social-links {
   padding: 0 100px;
   font-size: 150%;
 }
+/*gallery styles*/
+#photos img {
+  width:100%;
+  line-height:1em; /* No line height to remove gaps between images */
+}
+#gallery {
+  column-gap:0;
+  line-height:0; /* No line height to remove gaps between images */
+}
+
 .contact {
   display: flex; /* Ensures flex container behavior */
   flex-direction: row;
@@ -191,20 +220,6 @@ footer .social-links {
   padding: 0 100px;
   font-size: 150%;
 }
-/*gallery styles*/
-#photos img {
-  column-count: 3;
-  column-gap: 10px;
-  margin: 20px;
-}
-.gallery img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  break-inside: avoid; /* Prevents breaking inside the column */
-}
-
-
 /*Booking form styles*/
 #booking-form {
   display: flex;
@@ -212,17 +227,55 @@ footer .social-links {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background-color: var(--secondary-color) ; 
-  background: url("assets/css/images/pexels-pavel-danilyuk-6339326.webp") no-repeat center center
-    fixed; /* Corrected path to match the relative directory structure */
-  background-size: cover;
-  box-shadow: 0 10px 10px var(--primary-color);
-  z-index: 99;
+  background: url("./images/pexels-victorfreitas-791763.webp") no-repeat center center
+    fixed; /* Adjusted path assuming the image folder is one level up from the CSS folder */
+    background-size: cover;
+    z-index: 99;
+  }
+#input-form > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.contact :hover h3 {
+
+#nutrition .card {
+  display:flex;
+  align-items:baseline;
+  padding:40px;
+
+}
+.contact:hover h3 {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color); /* Ensure variables are defined in :root */
 }
+/*table Nutrition page*/
+#times {
+  background: url('./images/pexels-leonardho-1552242.webp') no-repeat center/cover;
+  /* Handles responsivity without the need for a media query */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#times div {
+  color: #fafafa;
+  background-color: rgba(77, 63, 63, 0.6);
+  padding: 15px;
+  text-align: center;
+  /* This will not wrap on screens of less than 400px wide.
+  Each div will expand to fill the available space on its row */
+  flex-basis: 200px;
+  flex-grow: 1;
+  /* Creates a grid of meetup time divs over the background image */
+  border: 2px solid white;
+}
+
+#times h3 {
+  /* Override the heading colour set in general styles */
+  color: #fafafa;
+}
+
 /*media queries for screens 768px and wider*/
 @media screen and (min-width: 768px) {
   /* Add your responsive styles here */
@@ -234,7 +287,9 @@ footer .social-links {
     z-index: 99;
   }
   #photos {
-    column-count: 3;
+    column-count: 2;
+    column-gap: 0; /* No gap between columns */
+    line-height: 0; /* No line height to remove gaps between images */
   }
   #nutrition {
     column-count: 2;
