@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!--Meta tags for search engines-->
-     <meta name="description" content="Fitness Forge - Your next adventure is waiting!" />
-     <meta name="keywords" content="fitness, health, nutrition, gym, personal trainer" />
-     <!--Bootstrap link-->
-    <title>Fitness Forge</title>
+    <title>Document</title>
     <!--favicon links-->
     <link
       rel="apple-touch-icon"
@@ -25,50 +21,54 @@
       type="image/png"
       sizes="16x16"
       href="assets/favicon/favicon-16x16.png"
+      
     />
+    <!--Meta tags for search engines-->
+    <meta name="description" content="Fitness Forge - Your next adventure is waiting!" />
+    <meta name="keywords" content="fitness, health, nutrition, gym, personal trainer" />
     <!--Bootstrap link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!--CSS link-->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body class="d-flex flex-column min-vh-100">
     <!--navigation section -->
-    <nav id="navbar" class="navbar navbar-expand-lg ms-auto container-fluid">
-        <div class="container py-3">
-            <a class="navbar-brand" href="index.html"><h1 class="text-center">Fitness Forge</h1></a>
+    <nav id="navbar" class="navbar navbar-expand-lg  ms-auto container-fluid">
+        <div class="container py-3 col-12">
+            <a class="navbar-brand" href="index.html"><img src="assets\css\images\favicon.ico" alt="Fitness Forge Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon text-white"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link fw-bold"  href="index.html">Home</a>
+                  <a class="nav-link active fw-bold" href="index.html" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fw-bold" href="gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bold active" aria-current="page" href="nutrition.html">Nutrition</a>
+                  <a class="nav-link fw-bold" href="nutrition.html">Nutrition</a>
                 </li>
                 <li class="nav-item fw-bold">
-                  <a class="nav-link fw-bold" href="booking.html">Booking</a>
+                  <a class="nav-link" href="booking.html">Booking</a>
                 </li>
               </ul>
             </div>
         </div>
     </nav>
     <main>
+      
       <section id="events" class="container section">
-        <div class="row">
-          <h2 class="text-center my-4">Fitness & nutrition</h2>
-    <div class="col-12 col-md-6">
+        <div class="row"><div><h1 class="text-center my-4 display-6"><a href="index.html">Fitness Forge</a></h1></div>
+      <div class="col-12 col-md-6">
        <div class="card mb-3">
         <img src="assets/css/images/pexels-thisisengineering-3912516 (1) (1) (2).webp" class="card-img-top" alt="...">
         <div class="card-body my-4">
           <h5 class="card-title">Paul Newman B.Sc honors Health Science</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Paul completed his B.Sc Hons and is now a fitness guru, bringing his wide array of experience to enable people to meet their fitness goals. Book now to avoid dissapointment to ensure that you don't miss out. </p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
@@ -78,86 +78,87 @@
         <img src="assets/css/images/pexels-rdne-8611938-transformed.webp" class="card-img-bottom my-4" alt="...">
         <div class="card-body my-4">
           <h5 class="card-title">Simon Roetz Diet & Nutrition expert</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">An expert in nutrtion, with a degree in Nutrition and fine dining experience as a chef, Simon fuses the best of both worls to provide a unique tailored service for all your nutritional requirements</p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
   </div>
-      <section>
-          <!-- Meetup Times section -->
-          <section id="meetups" class="my-4 text-center">
-            <h2>Meet-up Times</h2>
+  <div>
+      <!-- Meetup Times section -->
+      <section id="meetups" class="my-4 text-center">
             <div id="times">
                 <div>
-                    <h3>Fitness 1 <i class="fa-solid fa-city"></i></h3>
+                    <h3>Fitness 1 <i class="fa-solid fa-weight-hanging"></i></h3>
                     <p>Monday-Wednesday</p>
-                    <p>1 hour personalised training</p>
+                    <p>1 hour personalised training for beginners</p>
                     <p>Fitness Forge/ Paul</p>
                     <p>18:30</p>
                 </div>
                 <div>
-                    <h3>Fitness 2 <i class="fa-solid fa-tree"></i></h3>
+                    <h3>Fitness 2 <i class="fa-solid fa-volleyball"></i></h3>
                     <p>Tuesdays & Thursdays</p>
                     <p>1 hr rigorous and personalised training</p>
                     <p>Fitness forge</p>
                     <p>18:30</p>
                 </div>
                 <div>
-                    <h3>Nutrition <i class="fa-solid fa-city"></i></h3>
+                    <h3>Nutrition 1 <i class="fa-brands fa-nutritionix"></i></h3>
                     <p>Mondays and Tuesdays</p>
                     <p>Simon Roets personalised diet plans</p>
                     <p>Fitness forge</p>
                     <p>17h00</p>
                 </div>
                 <div>
-                    <h3>Trail <i class="fa-solid fa-tree"></i></h3>
+                    <h3>Nutrition 2 <i class="fa-solid fa-bowl-food"></i></h3>
                     <p>Wednesdays and fridays</p>
-                    <p>Nutrition plans for fast metabolism</p>
+                    <p>Nutrition plans for fast metabolism and well-being</p>
                     <p>Fitness forge</p>
                     <p>10h00</p>
                 </div>
-        </section>
+              </section>
+      </main>
+  <div class="text-center my-4"><a href="booking.html" id="book-now-button"><strong>Book now!</strong></a></div>
+  <br>
       </section>
-    </main>
+        <footer id="contact" class="mt-auto">
+            <div class="container section">
+                <div class="row">
+        
+                    <!-- Contact info -->
+                    <div class="col-12 text-center" id="bg-color">
+                        <h3 class="Contact"> Contact info</h3>
+                        <address>
+                            <br>
+                            <strong><i class="fa-solid fa-location-dot "></i> Fitness Guru</strong>
+                            78 Petersborough street
+                            London, UK
+                            <strong>Postcode:</strong> SW6 9PQ
+                        </address>
+                        <p><i class="fa-solid fa-phone"></i> 0161 742-6789
+                            <i class="fa-regular fa-paper-plane"></i> Fitness@guru.co.uk
+                        </p>
+                        <div class="social-links my-4">
+                            <a href="https://www.instagram.com" target="_blank"
+                                aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"
+                                aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)"
+                                rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+         <!-- Bootstrap JS Script-->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+         crossorigin="anonymous"></script>
+         <!--fontawesome link-->
+         <script src="https://kit.fontawesome.com/d4ad981eed.js" crossorigin="anonymous"></script>
+      </body>
+    </html>  
 
-    <footer id="contact" class="mt-auto">
-      <div class="container section">
-          <div class="row">
-  
-              <!-- Contact info -->
-              <div class="col-12 text-center" id="bg-color">
-                  <h3 class="Contact"> Contact info</h3>
-                  <address>
-                      <br>
-                      <strong><i class="fa-solid fa-location-dot "></i> Fitness Guru</strong>
-                      78 Petersborough street
-                      London, UK
-                      <strong>Postcode:</strong> SW6 9PQ
-                  </address>
-                  <p><i class="fa-solid fa-phone"></i> 0161 742-6789
-                      <i class="fa-regular fa-paper-plane"></i> Fitness@guru.co.uk
-                  </p>
-                  <div class="social-links my-4">
-                      <a href="https://www.instagram.com" target="_blank"
-                          aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener"><i
-                              class="fa-brands fa-instagram"></i></a>
-                      <a href="https://www.facebook.com" target="_blank"
-                          aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener"><i
-                              class="fa-brands fa-square-facebook"></i></a>
-                      <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)"
-                          rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
-   <!-- Bootstrap JS Script-->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-   crossorigin="anonymous"></script>
-   <!--fontawesome link-->
-   <script src="https://kit.fontawesome.com/d4ad981eed.js" crossorigin="anonymous"></script>
-</body>
-</html>
-             
+   
