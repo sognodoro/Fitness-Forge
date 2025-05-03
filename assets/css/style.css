@@ -15,26 +15,19 @@
 }
 /*Heading styles*/
 h1 {
-  font-family: var(--font-family-2), sans-serif; /* Use the alternative font */
-  font-size: 100%;
-  text-decoration: none;
+  font-family: var(--font-family-2), sans-serif; /* Use the alternative font 
+  */
+  font-size: 200;
   /* Align text to the center */
-  box-shadow: 0 10px 10px #0f0f10;
   z-index: 120;
-  color: #0b0505;
-  background-color: #0b0505;
+  background-color: black;
   border-radius: 8px;
   
 }
 
 h1:hover {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--secondary-color); /* Ensure variables are defined in :root */
-}
-
-h2:hover {
-  color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color), rgb(87, 23, 127); /* Ensure variables are defined in :root */
 }
 
 h3 {
@@ -84,10 +77,8 @@ nav {
   text-decoration: none;
   padding: 10px 20px;
   text-align: center;
-  box-shadow: 0 10px 10px #0f0f10;
   z-index: 120;
   color: #f9f2f2;
-  max-width: 100%;
   background-color: rgb(87, 27, 183);
   border-radius: 8px;
   border: 4px solid var(--primary-color, black); /* Fallback to black */
@@ -107,7 +98,7 @@ nav {
   max-width: 100%;
   background-color: rgb(87, 27, 183);
   border-radius: 8px;
-  border: 4px solid var(--primary-color, black); /* Fallback to black */
+  border: solid 4px black;
 }
 #submit-now-button:hover {
   color: var(--secondary-color);
@@ -148,7 +139,7 @@ nav {
 
 /*Body styles*/
 body {
-  background-color: rgb(12, 12, 11);
+  background-color: black;
 }
 main {
   color: var(--text-color);
@@ -157,6 +148,7 @@ main {
 /*footer styles*/
 footer {
   background-color: rgb(87, 27, 183);
+ 
   color: var(--text-color);
   padding: 20px;
   text-align: center;
@@ -254,10 +246,6 @@ footer .social-links {
   border: 2px solid white;
 }
 
-#times h3 {
-  /* Override the heading colour set in general styles */
-  color: #fafafa;
-}
 /*media queries for screens smaller than 576px*/
 @media screen and (max-width: 576px) {
   /* Add your responsive styles here */
@@ -277,11 +265,6 @@ footer .social-links {
 @media screen and (min-width: 768px) {
   /* Add your responsive styles here */
 
-  #services .card {
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space between */
-    margin: 10px; /* Space between cards */
-    box-shadow: 0 10px 10px var(--primary-color);
-    z-index: 99;
   }
   #photos {
     column-count: 2;
@@ -291,7 +274,7 @@ footer .social-links {
   #nutrition {
     column-count: 2;
   }
-}
+
 /*media queries for screens 992px and wider*/
 @media screen and (min-width: 992px) {
   /* Add your responsive styles here */
