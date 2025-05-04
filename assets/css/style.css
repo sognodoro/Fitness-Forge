@@ -4,37 +4,50 @@
 
 /*Color & font variables*/
 :root {
-  --primary-color: #0303fc; /* royal blue */
-  --secondary-color: #4103fc; /* navy blue */
-  --secondary-color-fallback: #000080; /* fallback navy blue */
-  --tertiary-color: #03f4fc; /* aquamarine */
-  --text-color: rgb(18, 17, 17); /* light gray */
-  --font-family: "Montserrat", sans-serif; /* default font */
-  --font-family-2: "Alfa Slab One", sans-serif; /* alternative font */
-  --border-color: black; /* default border color */
+  --primary-color: #0303fc;
+  /* royal blue */
+  --secondary-color: #4103fc;
+  /* navy blue */
+  --secondary-color-fallback: #000080;
+  /* fallback navy blue */
+  --tertiary-color: #03f4fc;
+  /* aquamarine */
+  --text-color: rgb(237, 228, 228);
+  /* light gray */
+  --font-family: "Montserrat", sans-serif;
+  /* default font */
+  --font-family-2: "Alfa Slab One", sans-serif;
+  /* alternative font */
+  --border-color: black;
+  /* default border color */
 }
+
 /*Heading styles*/
 h1 {
-  font-family: var(--font-family-2), sans-serif; /* Use the alternative font 
+  font-family: var(--font-family-2), sans-serif;
+  /* Use the alternative font 
   */
   font-size: 200;
   /* Align text to the center */
   z-index: 120;
   background-color: black;
   border-radius: 8px;
-  
+
 }
 
 h1:hover {
   color: var(--tertiary-color);
-  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--secondary-color); /* Ensure variables are defined in :root */
+  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--secondary-color);
+  /* Ensure variables are defined in :root */
 }
 
 h3 {
   color: var(--text-color);
   margin-bottom: 2rem;
-  margin-top: 2rem; /* Ensure this is applied to an element with proper context */
+  margin-top: 2rem;
+  /* Ensure this is applied to an element with proper context */
 }
+
 /*nav bar Styles*/
 nav {
   display: flex;
@@ -45,14 +58,16 @@ nav {
   box-shadow: 0 10px 10px var(--tertiary-color);
   z-index: 99;
 }
+
 #navbar {
-  background-color:rgb(87, 27, 183); 
+  background-color: rgb(87, 27, 183);
   box-shadow: 0 10px 10px var(--primary-color);
   z-index: 99;
   border: 4px solid black;
   border-radius: 10px;
   padding: 10px 20px;
 }
+
 #navbar .nav-link {
   font-family: var(--font-family), Arial, sans-serif;
   font-size: 150%;
@@ -62,11 +77,14 @@ nav {
   transition: all 0.3s ease-in-out;
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color, #03f4fc),
-    0 0 20px var(--primary-color, #0303fc); /* Added fallback colors */
+    0 0 20px var(--primary-color, #0303fc);
+  /* Added fallback colors */
 }
+
 #navbar .nav-item a:hover {
   text-shadow: 0 0 10px var(--primary-color, #0e0e15),
-    0 0 20px var(--tertiary-color, #03f4fc); /* Corrected fallback colors */
+    0 0 20px var(--tertiary-color, #03f4fc);
+  /* Corrected fallback colors */
 }
 
 /*button styles*/
@@ -81,12 +99,15 @@ nav {
   color: #f9f2f2;
   background-color: rgb(87, 27, 183);
   border-radius: 8px;
-  border: 4px solid var(--primary-color, black); /* Fallback to black */
+  border: 4px solid var(--primary-color, black);
+  /* Fallback to black */
 }
+
 #book-now-button:hover {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
+
 #submit-now-button {
   font-size: 100%;
   font-family: var(--font-family), Arial, sans-serif;
@@ -100,55 +121,80 @@ nav {
   border-radius: 8px;
   border: solid 4px black;
 }
+
 #submit-now-button:hover {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
 }
+
 /*Card styles*/
 #services .card-body ul {
   list-style-type: none;
   padding: 0 0;
 }
+
 #services .card-body {
   padding: 20px;
-  background-color: whitesmoke;/* Fallback to navy blue */
+  background-color: whitesmoke;
+  /* Fallback to navy blue */
   box-shadow: 0 10px 10px #571bb7;
   z-index: 99;
   border-radius: 8px;
 }
+
 #events .card-body {
   padding: 20px;
-  background-color: whitesmoke; /* Fallback to navy blue */
+  background-color: whitesmoke;
+  /* Fallback to navy blue */
   box-shadow: 0 10px 10px #571bb7;
   z-index: 99;
   border-radius: 8px;
 }
+
 #events .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background: url("./images/pexels-willpicturethis-1954524_converted.webp") no-repeat center center
-    fixed; /* Adjusted path assuming the image folder is one level up from the CSS folder */
-    background-size: cover;
-    z-index: 99;
+  background: url("./images/pexels-olly-903171.webp") no-repeat center center fixed;
+  /* Adjusted path assuming the image folder is one level up from the CSS folder */
+  background-size: cover;
+  z-index: 99;
+}
+/* Ensure the correct selector is used or add an HTML element with id="iframe" */
+#video-frame .card-body {
+  padding: 20px;
+  background-color: whitesmoke;
+  /* Fallback to navy blue */
+  box-shadow: 0 10px 10px #571bb7;
+  z-index: 99;
+  border-radius: 8px;
+
 }
 
+#video-frame .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: url("./images/pexels-victorfreitas-841130.webp") no-repeat center center fixed;
+  background-size: cover;
+  background-color: whitesmoke;
 
+}
 
 /*Body styles*/
 body {
-  background-color: black;
+  background-color: #171515;
+  /* Light gray for a cleaner look */
 }
-main {
-  color: var(--text-color);
-  font-family: var(--font-family);
-}
+
 /*footer styles*/
 footer {
   background-color: rgb(87, 27, 183);
- 
+
   color: var(--text-color);
   padding: 20px;
   text-align: center;
@@ -157,18 +203,22 @@ footer {
   box-shadow: 0 10px 10px var(--primary-color);
   z-index: 99;
 }
+
 footer a {
   color: rgb(48, 33, 72);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
 footer a:focus {
   outline: 2px dashed black;
   outline-offset: 4px;
 }
+
 footer a:hover {
   color: black;
 }
+
 footer p {
   margin: 0;
   padding: 0;
@@ -183,23 +233,29 @@ footer .social-links {
   padding: 0 100px;
   font-size: 150%;
 }
+
 /*gallery styles*/
 #photos img {
-  width:100%;
-  line-height:1em; /* No line height to remove gaps between images */
+  width: 100%;
+  line-height: 1em;
+  /* No line height to remove gaps between images */
 }
+
 #gallery {
-  column-gap:0;
-  line-height:0; /* No line height to remove gaps between images */
+  column-gap: 0;
+  line-height: 0;
+  /* No line height to remove gaps between images */
 }
 
 .contact {
-  display: flex; /* Ensures flex container behavior */
+  display: flex;
+  /* Ensures flex container behavior */
   flex-direction: row;
   margin-top: 10px;
   padding: 0 100px;
   font-size: 150%;
 }
+
 /*Booking form styles*/
 #booking-form {
   display: flex;
@@ -207,12 +263,13 @@ footer .social-links {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background: url("./images/pexels-victorfreitas-791763.webp") no-repeat center center
-    fixed; /* Adjusted path assuming the image folder is one level up from the CSS folder */
-    background-size: cover;
-    z-index: 99;
-  }
-#input-form > div {
+  background: url("./images/pexels-victorfreitas-791763.webp") no-repeat center center fixed;
+  /* Adjusted path assuming the image folder is one level up from the CSS folder */
+  background-size: cover;
+  z-index: 99;
+}
+
+#input-form>div {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -223,8 +280,10 @@ footer .social-links {
 
 .contact:hover h3 {
   color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color); /* Ensure variables are defined in :root */
+  text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--primary-color);
+  /* Ensure variables are defined in :root */
 }
+
 /*table Nutrition page*/
 #times {
   background: url('./images/pexels-leonardho-1552242.webp') no-repeat center/cover;
@@ -248,63 +307,88 @@ footer .social-links {
 
 /*media queries for screens smaller than 576px*/
 @media screen and (max-width: 576px) {
+
   /* Add your responsive styles here */
   #services .card {
-    flex: 1 1 calc(100% - 20px); /* One card per row with space between */
-    margin: 10px; /* Space between cards */
+    flex: 1 1 calc(100% - 20px);
+    /* One card per row with space between */
+    margin: 10px;
+    /* Space between cards */
     box-shadow: 0 10px 10px var(--primary-color);
     z-index: 99;
   }
+
   #photos {
     column-count: 1;
-    column-gap: 0; /* No gap between columns */
-    line-height: 0; /* No line height to remove gaps between images */
+    column-gap: 0;
+    /* No gap between columns */
+    line-height: 0;
+    /* No line height to remove gaps between images */
   }
-} 
+}
+
 /*media queries for screens 768px and wider*/
 @media screen and (min-width: 768px) {
   /* Add your responsive styles here */
 
-  }
-  #photos {
-    column-count: 2;
-    column-gap: 0; /* No gap between columns */
-    line-height: 0; /* No line height to remove gaps between images */
-  }
-  #nutrition {
-    column-count: 2;
-  }
+}
+
+#photos {
+  column-count: 2;
+  column-gap: 0;
+  /* No gap between columns */
+  line-height: 0;
+  /* No line height to remove gaps between images */
+}
+
+#nutrition {
+  column-count: 2;
+}
 
 /*media queries for screens 992px and wider*/
 @media screen and (min-width: 992px) {
+
   /* Add your responsive styles here */
   #services .card {
-    flex: 1 1 calc(25% - 20px); /* Four cards per row with space between */
-    margin: 10px; /* Space between cards */
+    flex: 1 1 calc(25% - 20px);
+    /* Four cards per row with space between */
+    margin: 10px;
+    /* Space between cards */
     box-shadow: 0 10px 10px var(--primary-color);
     z-index: 99;
   }
+
   #photos {
     column-count: 3;
-    column-gap: 0; /* No gap between columns */
-    line-height: 0; /* No line height to remove gaps between images */
+    column-gap: 0;
+    /* No gap between columns */
+    line-height: 0;
+    /* No line height to remove gaps between images */
   }
 }
-  #nutrition {
-    column-count: 3;
-  }
- /*media queries for screens 1200px and wider*/
+
+#nutrition {
+  column-count: 3;
+}
+
+/*media queries for screens 1200px and wider*/
 @media screen and (min-width: 1200px) {
+
   /* Add your responsive styles here */
   #services .card {
-    flex: 1 1 calc(20% - 20px); /* Five cards per row with space between */
-    margin: 10px; /* Space between cards */
+    flex: 1 1 calc(20% - 20px);
+    /* Five cards per row with space between */
+    margin: 10px;
+    /* Space between cards */
     box-shadow: 0 10px 10px var(--primary-color);
     z-index: 99;
   }
+
   #photos {
     column-count: 4;
-    column-gap: 0; /* No gap between columns */
-    line-height: 0; /* No line height to remove gaps between images */
+    column-gap: 0;
+    /* No gap between columns */
+    line-height: 0;
+    /* No line height to remove gaps between images */
   }
 }
