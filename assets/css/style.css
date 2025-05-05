@@ -24,17 +24,8 @@
 
 /*Heading styles*/
 h1 {
-  font-family: var(--font-family-2), sans-serif;
-  /* Use the alternative font 
-  */
-  font-size: 200;
-  /* Align text to the center */
-  z-index: 120;
-  background-color: black;
-  border-radius: 8px;
-
+  font-family: var(--font-family-2);
 }
-
 h1:hover {
   color: var(--tertiary-color);
   text-shadow: 0 0 10px var(--tertiary-color), 0 0 20px var(--secondary-color);
@@ -187,7 +178,7 @@ nav {
 
 /*Body styles*/
 body {
-  background-color: #171515;
+  background-color: #060505;
   /* Light gray for a cleaner look */
 }
 
