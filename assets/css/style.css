@@ -80,11 +80,9 @@ nav {
 
 /*button styles*/
 #book-now-button {
-  font-size: 100%;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
-  text-align: center;
   color:black;
   z-index: 120;
   background-color: rgb(87, 27, 183);
@@ -99,7 +97,6 @@ nav {
 }
 
 #submit-now-button {
-  font-size: 100%;
   text-transform: uppercase;
   padding: 10px 20px;
   text-align: center;
